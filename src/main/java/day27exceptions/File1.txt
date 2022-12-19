@@ -1,0 +1,7 @@
+Java is easy.
+Java is Object-Oriented proramming language.
+OOP has four principles;
+ 1)Inhertitance
+ 2)polymorphism
+ 3)encapsulation
+ 4)abstraction
