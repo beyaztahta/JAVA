@@ -15,6 +15,7 @@ public class Options extends Account{
 
     public void login(){
         System.out.println("Techproed ATM e hos geldınız.");
+        int count=0;
         do {
            data.put(12345,1234);
            data.put(23456,2345);
@@ -41,35 +42,31 @@ public class Options extends Account{
            int counter=0;
            for(Map.Entry<Integer,Integer> w: data.entrySet() ){
                if(w.getKey().equals(getAccountNumber()) && w.getValue().equals(getPinNumber())){
+
                    getAccountTypes();//hesap işlemlerine gidiniz.
+
                }else{
                    counter++;
                }
            }
 
            if(counter==data.size()){
+               count++;
                System.out.println("Yanlıs hesap numarası veya yanlıs pın numarası gırdınız.");
+               System.out.println("Herhengi bir rakama tıklayıp isleme devam ediniz veya q ya tıklayıp cıkınız.");
+               String exit=input.next();
+               if(exit.equalsIgnoreCase("q")){
+                   flag=false;
+               }
            }
-
+           if(count==3){
+               System.out.println("3 kere hatalı giris yaptınız kartınız bloke(hesabınız dondurulmustur.) olmustur.");
+               flag=false;
+           }
 
         }while(flag);
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     //Checking hesap islemleri => vadesiz hesap islemleri

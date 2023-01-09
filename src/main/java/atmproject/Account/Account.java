@@ -104,7 +104,7 @@ public class Account {
 
         if (amount <= 0) {
             System.out.println("0 veya eksi bakıyeler gecersizdir!");
-            getCheckingWithdraw();// aynı methodu cagırısak aynı işlemi tekrarlamış oluruz.=recursiye methodu
+            getCheckingWithdraw();// aynı methodu cagırısak aynı işlemi tekrarlamış oluruz.=recursive methodu
         } else if (amount <= checkingBalance) {
             calculateCheckingBalanceAfterWithdraw(amount);
             displayCurrentAmount(checkingBalance);
